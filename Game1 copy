@@ -1,10 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System.Collections.Generic;
-using System.IO;
-using Newtonsoft.Json;
-using System;
 
 namespace coding;
 
@@ -16,6 +12,9 @@ public class Game1 : Game
     int deadZone;
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+    private GraphicsDeviceManager _graphics;
+    private SpriteBatch _spriteBatch;
+
     private SpriteFont _font; // Шрифт для текста
     private Dictionary<string, Dictionary<string, string>> _localization;
     private string _currentLanguage = "Русский";
@@ -53,7 +52,7 @@ public class Game1 : Game
         _font = Content.Load<SpriteFont>("DefaultFont");
     }
 
-    private void LoadLocalization()
+private void LoadLocalization()
         {
             try
             {
@@ -156,3 +155,4 @@ public class Game1 : Game
             base.Draw(gameTime);
         }
     }
+}
